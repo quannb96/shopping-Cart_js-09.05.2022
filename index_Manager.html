@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Manager Shoes SHOP - Nguyễn Bảo Quân FE23</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- fontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!--  CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="myHeader">
+      <h1>
+        <a href="Store_Cart.html"
+          >Store
+          <i class="fa-solid fa-store"></i>
+          &nbsp;
+          <i class="fa-solid fa-angles-left"></i>
+          == <em>Shopping Cart here</em>
+        </a>
+      </h1>
+      <h4>Product Manager</h4>
+    </div>
+    <div class="container">
+      <div class="row">
+        <form
+          onsubmit="event.preventDefault();onFormSubmit();"
+          autocomplete="off"
+          id="formInfo"
+          class="styleForm"
+        >
+          <legend id="topPage">Add Product To Shop</legend>
+          <input type="hidden" id="id_product" />
+
+          <div class="form-group">
+            <div class="form-part">
+              <label class="styleLabel" for="">Product's name:</label>
+              <input
+                type="text"
+                class="form-control styleInput"
+                id="nameProduct"
+                placeholder="Product's name"
+                required
+              />
+              <small class="validation-error hide" id="nameProductError"
+                >This is required!</small
+              >
+            </div>
+            <br />
+            <div class="form-part">
+              <label class="styleLabel" for="">Images URL:</label>
+              <input
+                type="url"
+                class="form-control styleInput"
+                id="imgProduct"
+                placeholder="http://..."
+                required
+              />
+              <small class="validation-error hide" id="imgProductError"
+                >This is required!</small
+              >
+            </div>
+            <br />
+            <div class="form-part">
+              <label class="styleLabel" for="">Product's price:</label>
+              <input
+                type="number"
+                class="form-control styleInput"
+                id="priceProduct"
+                placeholder="VND (example: 1000)"
+                required
+              />
+              <small class="validation-error hide" id="priceProductError"
+                >This is required!</small
+              >
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btnManager" id="btnAdd">
+            ADD
+          </button>
+          <button
+            type="button"
+            onclick="updateProduct()"
+            class="btn btn-outline-success btnManager"
+            style="display: none"
+            id="btnUpdate"
+          >
+            Update
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row gy-3 mx-5" id="listProducts"></div>
+    </div>
+
+    <!-- Optional JavaScript -->
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // Scroll Header >>
+      window.onscroll = function () {
+        myFunction();
+      };
+
+      var header = document.getElementById("myHeader");
+      var sticky = header.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffset > sticky) {
+          header.classList.add("sticky");
+        } else {
+          header.classList.remove("sticky");
+        }
+      }
+    </script>
+    <script src="/js/createID.js"></script>
+    <script src="/js/getItemFromLocalStorage.js"></script>
+    <script src="/js/managerShop.js"></script>
+  </body>
+</html>

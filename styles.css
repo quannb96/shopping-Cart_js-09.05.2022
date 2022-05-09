@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+  width: 100%;
+  height: auto;
+}
+#myHeader, .btnClose{
+    cursor: pointer;
+    color: #ffffff;
+    z-index: 1;
+    background-color: #00410a; 
+    background-image: linear-gradient(to bottom right, #00410a, #15d100);
+}
+#myHeader{
+  display: flex;
+  justify-content: space-between;
+}
+#myHeader a{
+  text-decoration: none;
+  color: #fff;
+}
+#myHeader a{
+  text-decoration: none;
+
+}
+#myHeader a:hover > i {
+  color: #ff1500;
+}
+#myHeader h4 {
+  margin-right: 10em;
+  margin-top: 10px;
+}
+#iconCart, .btnClose{
+    font-size: 30px;
+}
+#iconCart:hover, .btnClose:hover{
+  color: #ff1500;
+}
+h1{
+    padding-left: 5rem;
+    margin-bottom: 0;
+}
+h5{ 
+  font-weight: bold;
+}
+.numShopping{
+    font-size: 15px;
+    top: -20px;
+    border-radius: 50%;
+    background-color: #dd6300;
+    padding: 1px 5px;
+}
+
+.btnClose  {
+    padding: 0.55rem;  
+}
+#myCart{
+    position: absolute;
+    width: 700px;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    position: fixed;
+    background-color: #eee;
+    z-index: 2;
+    display: none;
+    overflow:scroll;
+}
+
+.card:hover .imgCart{
+    padding: 10px;
+    transition: 0.4s;
+    scroll-behavior: smooth;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .container-fluid {
+  padding-top: 102px;
+}
+.size14{
+    text-align: center;
+    font-size: 14px;
+}
+.btnDeleteAll{
+  padding: 3px 3px;
+}
+.table td{
+    padding: 5px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+
+/* ======= form ========= */
+.styleForm{
+  width: 70%;
+  margin: 1em auto;
+  padding: 10px 10px;
+  height: auto;
+  border: 3px solid green;
+  border-radius: .5em;
+  font-size: 20px;
+}
+form legend{
+  text-align: center;
+  color: #007400;
+  font-size: 40px;
+}
+.styleLabel{
+  width: 25%;
+  float: left;
+  padding: 10px;
+  font-size: 20px;
+}
+.styleInput{
+  font-size: 16px;
+  width: 70%;
+  padding: 20px;
+  border: 1px solid green;
+  outline: none;
+  border-radius: .2em;
+}
+.btnManager{
+  outline: none;
+  border-radius: 20em;
+  width: 40%;
+  padding: 10px;
+  background-color: #00a300;
+  margin: 10px 30%;
+  font-size: 24px;
+  color: #fff;
+  font-weight: bold;
+}
+.btnManager:hover{
+  color: #fff;
+  /* background-color: #007e00; */
+ background-image: linear-gradient(to bottom right, #00410a, #12b100);
+
+  outline: none;
+}
+.btnEdit{
+  padding: 6px 20px;
+  font-weight: bold;
+  margin: 0 20% 0 15%
+}
+.btnUpdate{
+  margin: 0 4em 0 1em;
+  width: 100px;
+  font-weight: bold;
+}
+.hide{
+  display: none;
+}
