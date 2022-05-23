@@ -6,7 +6,7 @@ This is Cart Shopping.
 Allow stores to add, update, delete their products(name, URL image, price) to shop page. 
 Product added to item (products) of localStorage.
 
-2 File: Store_Cart.html
+2. File: Store_Cart.html
 Get the item (products) from localStorage.
 Display products on the sales page.
 User is allowed to add products to cart (quantity, delete)
